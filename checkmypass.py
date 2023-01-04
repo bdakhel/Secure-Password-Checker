@@ -42,7 +42,6 @@ def main(passwords):
         hash1, hash2 = process_hash(hash)
         response = request_data(hash1)
         processed = process_response(response)
-        print(processed)
         count = check_pass(processed,hash2)
         if count == 0:
             print(f"Your password is secure.\nThere are {count} matches to \'{password}\'.")
